@@ -186,12 +186,11 @@
     <div class="sidenav">
       <img
         src="favicon.png"
-        width="80px"
-        height="80px"
+        width="100px"
+        height="100px"
         alt="Logo"
         style="margin-left: auto; margin-right: auto; display: block"
       />
-      <p style="text-align: center; color: #737272; font-size: 12px">v0.1</p>
       <a href="#violin">Violin Plot</a>
       <a href="#heatmap">Heatmaps</a>
       <a href="#regression_plots">Regression plots: True vs. Predicted</a>
@@ -216,93 +215,319 @@
         height="100px"
         alt="Logo"
       />
-<h1>Results for to_invariant_worlds: LCO</h1>
-<object data=critical_difference_plots/critical_difference_algorithms_LCO.svg> </object><br><br><h2>Results of Post-Hoc Conover Test</h2><br><table class="display customDataTable" style="width:100%">
+<h1>Results for lco_run: LCO</h1>
+<object data=critical_difference_plots/critical_difference_algorithms_LCO.svg> </object><br><br>This diagram displays the mean rank of each model over all cross-validation splits: Within each CV split, the models are ranked according to their MSE. We calculate whether a model is significantly better than another one using the Friedman test and the post-hoc Conover test. The Friedman test shows whether there are overall differences between the models. After a significantFriedman test, the pairwise Conover test is performed to identify which models are significantly outperforming others. One line indicates which models are not significantly different from each other. The p-values are shown below. This can only be rendered if at least 3 models were run.<br><br><h2>Results of Post-Hoc Conover Test</h2><br><table class="display customDataTable" style="width:100%">
   <thead>
     <tr style="text-align: right;">
       <th></th>
+      <th>DIPK</th>
+      <th>ElasticNet</th>
+      <th>GradientBoosting</th>
+      <th>MultiOmicsNeuralNetwork</th>
       <th>MultiOmicsRandomForest</th>
+      <th>NaiveCellLineMeanPredictor</th>
+      <th>NaiveDrugMeanPredictor</th>
       <th>NaiveMeanEffectsPredictor</th>
       <th>NaivePredictor</th>
+      <th>RandomForest</th>
+      <th>SRMF</th>
+      <th>SimpleNeuralNetwork</th>
+      <th>SuperFELTR</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th>MultiOmicsRandomForest</th>
-      <td>1.0</td>
+      <th>DIPK</th>
+      <td>1.0000</td>
+      <td>0.0000</td>
+      <td>0.0000</td>
+      <td>0.0000</td>
+      <td>0.0000</td>
+      <td>0.0000</td>
+      <td>0.0000</td>
+      <td>0.0000</td>
+      <td>0.0000</td>
+      <td>0.0000</td>
+      <td>0.0000</td>
+      <td>0.0083</td>
       <td>0.0</td>
+    </tr>
+    <tr>
+      <th>ElasticNet</th>
+      <td>0.0000</td>
+      <td>1.0000</td>
+      <td>0.0000</td>
+      <td>0.0000</td>
+      <td>0.0000</td>
+      <td>0.0031</td>
+      <td>0.0000</td>
+      <td>0.0000</td>
+      <td>0.0031</td>
+      <td>0.0000</td>
+      <td>0.0000</td>
+      <td>0.0000</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>GradientBoosting</th>
+      <td>0.0000</td>
+      <td>0.0000</td>
+      <td>1.0000</td>
+      <td>0.0000</td>
+      <td>0.0000</td>
+      <td>0.0000</td>
+      <td>0.0000</td>
+      <td>0.0000</td>
+      <td>0.0000</td>
+      <td>0.0000</td>
+      <td>0.0000</td>
+      <td>0.0083</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>MultiOmicsNeuralNetwork</th>
+      <td>0.0000</td>
+      <td>0.0000</td>
+      <td>0.0000</td>
+      <td>1.0000</td>
+      <td>0.0000</td>
+      <td>0.0000</td>
+      <td>0.0000</td>
+      <td>0.0000</td>
+      <td>0.0000</td>
+      <td>0.0000</td>
+      <td>0.0083</td>
+      <td>0.0000</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>MultiOmicsRandomForest</th>
+      <td>0.0000</td>
+      <td>0.0000</td>
+      <td>0.0000</td>
+      <td>0.0000</td>
+      <td>1.0000</td>
+      <td>0.0000</td>
+      <td>0.0000</td>
+      <td>0.0000</td>
+      <td>0.0000</td>
+      <td>0.7376</td>
+      <td>0.0000</td>
+      <td>0.0000</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>NaiveCellLineMeanPredictor</th>
+      <td>0.0000</td>
+      <td>0.0031</td>
+      <td>0.0000</td>
+      <td>0.0000</td>
+      <td>0.0000</td>
+      <td>1.0000</td>
+      <td>0.0000</td>
+      <td>0.0000</td>
+      <td>1.0000</td>
+      <td>0.0000</td>
+      <td>0.0000</td>
+      <td>0.0000</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>NaiveDrugMeanPredictor</th>
+      <td>0.0000</td>
+      <td>0.0000</td>
+      <td>0.0000</td>
+      <td>0.0000</td>
+      <td>0.0000</td>
+      <td>0.0000</td>
+      <td>1.0000</td>
+      <td>0.7376</td>
+      <td>0.0000</td>
+      <td>0.0000</td>
+      <td>0.0000</td>
+      <td>0.0000</td>
       <td>0.0</td>
     </tr>
     <tr>
       <th>NaiveMeanEffectsPredictor</th>
-      <td>0.0</td>
-      <td>1.0</td>
+      <td>0.0000</td>
+      <td>0.0000</td>
+      <td>0.0000</td>
+      <td>0.0000</td>
+      <td>0.0000</td>
+      <td>0.0000</td>
+      <td>0.7376</td>
+      <td>1.0000</td>
+      <td>0.0000</td>
+      <td>0.0000</td>
+      <td>0.0000</td>
+      <td>0.0000</td>
       <td>0.0</td>
     </tr>
     <tr>
       <th>NaivePredictor</th>
+      <td>0.0000</td>
+      <td>0.0031</td>
+      <td>0.0000</td>
+      <td>0.0000</td>
+      <td>0.0000</td>
+      <td>1.0000</td>
+      <td>0.0000</td>
+      <td>0.0000</td>
+      <td>1.0000</td>
+      <td>0.0000</td>
+      <td>0.0000</td>
+      <td>0.0000</td>
       <td>0.0</td>
+    </tr>
+    <tr>
+      <th>RandomForest</th>
+      <td>0.0000</td>
+      <td>0.0000</td>
+      <td>0.0000</td>
+      <td>0.0000</td>
+      <td>0.7376</td>
+      <td>0.0000</td>
+      <td>0.0000</td>
+      <td>0.0000</td>
+      <td>0.0000</td>
+      <td>1.0000</td>
+      <td>0.0000</td>
+      <td>0.0000</td>
       <td>0.0</td>
+    </tr>
+    <tr>
+      <th>SRMF</th>
+      <td>0.0000</td>
+      <td>0.0000</td>
+      <td>0.0000</td>
+      <td>0.0083</td>
+      <td>0.0000</td>
+      <td>0.0000</td>
+      <td>0.0000</td>
+      <td>0.0000</td>
+      <td>0.0000</td>
+      <td>0.0000</td>
+      <td>1.0000</td>
+      <td>0.0000</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>SimpleNeuralNetwork</th>
+      <td>0.0083</td>
+      <td>0.0000</td>
+      <td>0.0083</td>
+      <td>0.0000</td>
+      <td>0.0000</td>
+      <td>0.0000</td>
+      <td>0.0000</td>
+      <td>0.0000</td>
+      <td>0.0000</td>
+      <td>0.0000</td>
+      <td>0.0000</td>
+      <td>1.0000</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>SuperFELTR</th>
+      <td>0.0000</td>
+      <td>0.0000</td>
+      <td>0.0000</td>
+      <td>0.0000</td>
+      <td>0.0000</td>
+      <td>0.0000</td>
+      <td>0.0000</td>
+      <td>0.0000</td>
+      <td>0.0000</td>
+      <td>0.0000</td>
+      <td>0.0000</td>
+      <td>0.0000</td>
       <td>1.0</td>
     </tr>
   </tbody>
 </table><h2 id='violin'>Violin Plots of Performance Measures over CV runs</h2>
 <h3>Violin plots comparing all models</h3>
-<iframe src="violin_plots/violin_algorithms_LCO.html" width="100%" height="100%" frameBorder="0"></iframe>
+To focus on a specific metric, choose it in the dropdown menu in the top right corner.You can investigate the distribution of the performance measures by hovering over the plot.
+To select/exclude specific algorithms, (double-)click them in the legend.<iframe src="violin_plots/violin_algorithms_LCO.html" width="100%" height="100%" frameBorder="0"></iframe>
 <h3>Violin plots comparing all models with normalized metrics</h3>
-Before calculating the evaluation metrics, all values were normalized by the mean of the drug or cell line. Since this only influences the R^2 and the correlation metrics, the error metrics are not shown. 
+Before calculating the evaluation metrics, all values were normalized by the predictions of the NaiveMeanEffectsPredictor. Since this only influences the R^2 and the correlation metrics, the error metrics are not shown. 
 <iframe src="violin_plots/violin_algorithms_LCO_normalized.html" width="100%" height="100%" frameBorder="0"></iframe>
 <h3>Violin plots comparing performance measures for tests within each model</h3>
-<ul><li><a href="violin_plots/violin_algorithms_LCO.html" target="_blank">violin_algorithms_LCO.html</a></li>
-<li><a href="violin_plots/violin_algorithms_LCO_normalized.html" target="_blank">violin_algorithms_LCO_normalized.html</a></li>
+<ul><li><a href="violin_plots/violin_NaiveCellLineMeanPredictor_LCO.html" target="_blank">violin_NaiveCellLineMeanPredictor_LCO.html</a></li>
+<li><a href="violin_plots/violin_ElasticNet_LCO.html" target="_blank">violin_ElasticNet_LCO.html</a></li>
+<li><a href="violin_plots/violin_RandomForest_LCO.html" target="_blank">violin_RandomForest_LCO.html</a></li>
+<li><a href="violin_plots/violin_SimpleNeuralNetwork_LCO.html" target="_blank">violin_SimpleNeuralNetwork_LCO.html</a></li>
+<li><a href="violin_plots/violin_MultiOmicsRandomForest_LCO.html" target="_blank">violin_MultiOmicsRandomForest_LCO.html</a></li>
+<li><a href="violin_plots/violin_MultiOmicsNeuralNetwork_LCO.html" target="_blank">violin_MultiOmicsNeuralNetwork_LCO.html</a></li>
+<li><a href="violin_plots/violin_SuperFELTR_LCO.html" target="_blank">violin_SuperFELTR_LCO.html</a></li>
+<li><a href="violin_plots/violin_SRMF_LCO.html" target="_blank">violin_SRMF_LCO.html</a></li>
+<li><a href="violin_plots/violin_GradientBoosting_LCO.html" target="_blank">violin_GradientBoosting_LCO.html</a></li>
+<li><a href="violin_plots/violin_DIPK_LCO.html" target="_blank">violin_DIPK_LCO.html</a></li>
 </ul>
 <h2 id='heatmap'>Heatmap Plots of Performance Measures over CV runs</h2>
 <h3>Heatmap plots comparing all models</h3>
+Unnormalized metrics collapsed over all CV runs with mean and standard deviation.
+The strictly standardized mean difference is a measure of effect size which is calculated pairwise. For two models, it is calculated as [mean1 - mean2] / [sqrt(var1 + var2)] for a specific measure. The larger the absolute SSMD, the stronger the effect (a strong effect could, is e.g., a |SSMD| > 2 ).
 <iframe src="heatmaps/heatmap_algorithms_LCO.html" width="100%" height="100%" frameBorder="0"></iframe>
 <h3>Heatmap plots comparing all models with normalized metrics</h3>
-Before calculating the evaluation metrics, all values were normalized by the mean of the drug or cell line. Since this only influences the R^2 and the correlation metrics, the error metrics are not shown. 
+Before calculating the evaluation metrics, all values were normalized by the predictions of the NaiveMeanEffectsPredictor. Since this only influences the R^2 and the correlation metrics, the error metrics are not shown. 
 <iframe src="heatmaps/heatmap_algorithms_LCO_normalized.html" width="100%" height="100%" frameBorder="0"></iframe>
 <h3>Heatmap plots comparing performance measures for tests within each model</h3>
-<ul><li><a href="heatmaps/heatmap_algorithms_LCO.html" target="_blank">heatmap_algorithms_LCO.html</a></li>
-<li><a href="heatmaps/heatmap_algorithms_LCO_normalized.html" target="_blank">heatmap_algorithms_LCO_normalized.html</a></li>
+<ul><li><a href="heatmaps/heatmap_GradientBoosting_LCO.html" target="_blank">heatmap_GradientBoosting_LCO.html</a></li>
+<li><a href="heatmaps/heatmap_MultiOmicsNeuralNetwork_LCO.html" target="_blank">heatmap_MultiOmicsNeuralNetwork_LCO.html</a></li>
+<li><a href="heatmaps/heatmap_RandomForest_LCO.html" target="_blank">heatmap_RandomForest_LCO.html</a></li>
+<li><a href="heatmaps/heatmap_NaiveCellLineMeanPredictor_LCO.html" target="_blank">heatmap_NaiveCellLineMeanPredictor_LCO.html</a></li>
+<li><a href="heatmaps/heatmap_SuperFELTR_LCO.html" target="_blank">heatmap_SuperFELTR_LCO.html</a></li>
+<li><a href="heatmaps/heatmap_ElasticNet_LCO.html" target="_blank">heatmap_ElasticNet_LCO.html</a></li>
+<li><a href="heatmaps/heatmap_MultiOmicsRandomForest_LCO.html" target="_blank">heatmap_MultiOmicsRandomForest_LCO.html</a></li>
+<li><a href="heatmaps/heatmap_SimpleNeuralNetwork_LCO.html" target="_blank">heatmap_SimpleNeuralNetwork_LCO.html</a></li>
+<li><a href="heatmaps/heatmap_DIPK_LCO.html" target="_blank">heatmap_DIPK_LCO.html</a></li>
+<li><a href="heatmaps/heatmap_SRMF_LCO.html" target="_blank">heatmap_SRMF_LCO.html</a></li>
 </ul>
 <h2 id="regression_plots">Regression plots</h2>
 <ul>
-<li><a href="regression_plots/regression_lines_LCO_cell_line_MultiOmicsRandomForest.html" target="_blank">regression_lines_LCO_cell_line_MultiOmicsRandomForest.html</a></li>
-<li><a href="regression_plots/regression_lines_LCO_cell_line_NaiveMeanEffectsPredictor.html" target="_blank">regression_lines_LCO_cell_line_NaiveMeanEffectsPredictor.html</a></li>
-<li><a href="regression_plots/regression_lines_LCO_cell_line_NaivePredictor.html" target="_blank">regression_lines_LCO_cell_line_NaivePredictor.html</a></li>
-<li><a href="regression_plots/regression_lines_LCO_cell_line_normalized_MultiOmicsRandomForest.html" target="_blank">regression_lines_LCO_cell_line_normalized_MultiOmicsRandomForest.html</a></li>
-<li><a href="regression_plots/regression_lines_LCO_cell_line_normalized_NaiveMeanEffectsPredictor.html" target="_blank">regression_lines_LCO_cell_line_normalized_NaiveMeanEffectsPredictor.html</a></li>
-<li><a href="regression_plots/regression_lines_LCO_cell_line_normalized_NaivePredictor.html" target="_blank">regression_lines_LCO_cell_line_normalized_NaivePredictor.html</a></li>
+<li><a href="regression_plots/regression_lines_LCO_cell_line_name_DIPK.html" target="_blank">regression_lines_LCO_cell_line_name_DIPK.html</a></li>
+<li><a href="regression_plots/regression_lines_LCO_cell_line_name_ElasticNet.html" target="_blank">regression_lines_LCO_cell_line_name_ElasticNet.html</a></li>
+<li><a href="regression_plots/regression_lines_LCO_cell_line_name_GradientBoosting.html" target="_blank">regression_lines_LCO_cell_line_name_GradientBoosting.html</a></li>
+<li><a href="regression_plots/regression_lines_LCO_cell_line_name_MultiOmicsNeuralNetwork.html" target="_blank">regression_lines_LCO_cell_line_name_MultiOmicsNeuralNetwork.html</a></li>
+<li><a href="regression_plots/regression_lines_LCO_cell_line_name_MultiOmicsRandomForest.html" target="_blank">regression_lines_LCO_cell_line_name_MultiOmicsRandomForest.html</a></li>
+<li><a href="regression_plots/regression_lines_LCO_cell_line_name_NaiveCellLineMeanPredictor.html" target="_blank">regression_lines_LCO_cell_line_name_NaiveCellLineMeanPredictor.html</a></li>
+<li><a href="regression_plots/regression_lines_LCO_cell_line_name_RandomForest.html" target="_blank">regression_lines_LCO_cell_line_name_RandomForest.html</a></li>
+<li><a href="regression_plots/regression_lines_LCO_cell_line_name_SRMF.html" target="_blank">regression_lines_LCO_cell_line_name_SRMF.html</a></li>
+<li><a href="regression_plots/regression_lines_LCO_cell_line_name_SimpleNeuralNetwork.html" target="_blank">regression_lines_LCO_cell_line_name_SimpleNeuralNetwork.html</a></li>
+<li><a href="regression_plots/regression_lines_LCO_cell_line_name_SuperFELTR.html" target="_blank">regression_lines_LCO_cell_line_name_SuperFELTR.html</a></li>
+<li><a href="regression_plots/regression_lines_LCO_cell_line_name_normalized_DIPK_normalized.html" target="_blank">regression_lines_LCO_cell_line_name_normalized_DIPK_normalized.html</a></li>
+<li><a href="regression_plots/regression_lines_LCO_cell_line_name_normalized_ElasticNet_normalized.html" target="_blank">regression_lines_LCO_cell_line_name_normalized_ElasticNet_normalized.html</a></li>
+<li><a href="regression_plots/regression_lines_LCO_cell_line_name_normalized_GradientBoosting_normalized.html" target="_blank">regression_lines_LCO_cell_line_name_normalized_GradientBoosting_normalized.html</a></li>
+<li><a href="regression_plots/regression_lines_LCO_cell_line_name_normalized_MultiOmicsNeuralNetwork_normalized.html" target="_blank">regression_lines_LCO_cell_line_name_normalized_MultiOmicsNeuralNetwork_normalized.html</a></li>
+<li><a href="regression_plots/regression_lines_LCO_cell_line_name_normalized_MultiOmicsRandomForest_normalized.html" target="_blank">regression_lines_LCO_cell_line_name_normalized_MultiOmicsRandomForest_normalized.html</a></li>
+<li><a href="regression_plots/regression_lines_LCO_cell_line_name_normalized_NaiveCellLineMeanPredictor_normalized.html" target="_blank">regression_lines_LCO_cell_line_name_normalized_NaiveCellLineMeanPredictor_normalized.html</a></li>
+<li><a href="regression_plots/regression_lines_LCO_cell_line_name_normalized_RandomForest_normalized.html" target="_blank">regression_lines_LCO_cell_line_name_normalized_RandomForest_normalized.html</a></li>
+<li><a href="regression_plots/regression_lines_LCO_cell_line_name_normalized_SRMF_normalized.html" target="_blank">regression_lines_LCO_cell_line_name_normalized_SRMF_normalized.html</a></li>
+<li><a href="regression_plots/regression_lines_LCO_cell_line_name_normalized_SimpleNeuralNetwork_normalized.html" target="_blank">regression_lines_LCO_cell_line_name_normalized_SimpleNeuralNetwork_normalized.html</a></li>
+<li><a href="regression_plots/regression_lines_LCO_cell_line_name_normalized_SuperFELTR_normalized.html" target="_blank">regression_lines_LCO_cell_line_name_normalized_SuperFELTR_normalized.html</a></li>
 </ul>
-<h2 id="corr_comp">Comparison of correlation metrics</h2>
-<h3 id="corr_comp_drug">Drug-wise comparison</h3>
-<h4>Overall comparison between models</h4>
-<h4>Comparison between all models, dropdown menu</h4>
-<iframe src="corr_comp_scatter/corr_comp_scatter_drug_LCO.html" width="100%" height="100%" frameBorder="0"></iframe>
+<h2 id="corr_comp">Comparison of normalized R^2 values</h2>
+R^2 values can be compared here between models, either per cell line or per drug. This can either show if a model has consistently higher or lower R^2 values than another model or identify cell lines/drugs for which models agree or disagree.
+The x-axis is the first dropdown menu, the y-axis is the second dropdown menu.
+<h3 id="corr_comp_drug">Cell_line_name-wise comparison</h3>
+<iframe src="comp_scatter/comp_scatter_cell_line_name_LCO.html" width="100%" height="100%" frameBorder="0"></iframe>
 <h4>Comparisons per model</h4>
 <ul>
-<li><a href="corr_comp_scatter/corr_comp_scatter_drug_LCO.html" target="_blank">corr_comp_scatter_drug_LCO.html</a></li>
-<li><a href="corr_comp_scatter/corr_comp_scatter_overall_drug_LCO.html" target="_blank">corr_comp_scatter_overall_drug_LCO.html</a></li>
+<li><a href="comp_scatter/comp_scatter_cell_line_name DIPK LCO.html" target="_blank">comp_scatter_cell_line_name DIPK LCO.html</a></li>
+<li><a href="comp_scatter/comp_scatter_cell_line_name ElasticNet LCO.html" target="_blank">comp_scatter_cell_line_name ElasticNet LCO.html</a></li>
+<li><a href="comp_scatter/comp_scatter_cell_line_name GradientBoosting LCO.html" target="_blank">comp_scatter_cell_line_name GradientBoosting LCO.html</a></li>
+<li><a href="comp_scatter/comp_scatter_cell_line_name MultiOmicsNeuralNetwork LCO.html" target="_blank">comp_scatter_cell_line_name MultiOmicsNeuralNetwork LCO.html</a></li>
+<li><a href="comp_scatter/comp_scatter_cell_line_name MultiOmicsRandomForest LCO.html" target="_blank">comp_scatter_cell_line_name MultiOmicsRandomForest LCO.html</a></li>
+<li><a href="comp_scatter/comp_scatter_cell_line_name RandomForest LCO.html" target="_blank">comp_scatter_cell_line_name RandomForest LCO.html</a></li>
+<li><a href="comp_scatter/comp_scatter_cell_line_name SRMF LCO.html" target="_blank">comp_scatter_cell_line_name SRMF LCO.html</a></li>
+<li><a href="comp_scatter/comp_scatter_cell_line_name SimpleNeuralNetwork LCO.html" target="_blank">comp_scatter_cell_line_name SimpleNeuralNetwork LCO.html</a></li>
+<li><a href="comp_scatter/comp_scatter_cell_line_name SuperFELTR LCO.html" target="_blank">comp_scatter_cell_line_name SuperFELTR LCO.html</a></li>
 </ul>
-<h2 id="tables"> Evaluation Results Table</h2>
-<table id="summaryTable" class="display" style="width:100%">
-<thead>
-<tr>
-<th>data</th>
-</tr>
-</thead>
-<tbody></tbody>
-</table>
-<h2> Evaluation Results per Drug Table</h2>
-<table id="drugTable" class="display" style="width:100%">
-<thead>
-<tr>
-<th>data</th>
-</tr>
-</thead>
-<tbody></tbody>
-</table>
+<iframe src="html_tables/table_cross_study_GDSC1_LCO.html" width="100%" height="600" frameborder="0"></iframe>
+<iframe src="html_tables/table_cross_study_CTRPv1_LCO.html" width="100%" height="600" frameborder="0"></iframe>
+<iframe src="html_tables/table_cross_study_CCLE_LCO.html" width="100%" height="600" frameborder="0"></iframe>
+<iframe src="html_tables/table_cross_study_GDSC2_LCO.html" width="100%" height="600" frameborder="0"></iframe>
 </div>
 </body>
 </html>
