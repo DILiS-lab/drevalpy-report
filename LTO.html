@@ -215,7 +215,7 @@
         height="100px"
         alt="Logo"
       />
-<h1>Results for report: LTO</h1>
+<h1>Results for all_runs: LTO</h1>
 <object data=critical_difference_plots/critical_difference_algorithms_LTO.svg> </object><br><br>This diagram displays the mean rank of each model over all cross-validation splits: Within each CV split, the models are ranked according to their MSE. We calculate whether a model is significantly better than another one using the Friedman test and the post-hoc Conover test. The Friedman test shows whether there are overall differences between the models. After a significantFriedman test, the pairwise Conover test is performed to identify which models are significantly outperforming others. One line indicates which models are not significantly different from each other. The p-values are shown below. This can only be rendered if at least 3 models were run.<br><br><h2>Results of Post-Hoc Conover Test</h2><br><table class="display customDataTable" style="width:100%">
   <thead>
     <tr style="text-align: right;">
@@ -229,6 +229,7 @@
       <th>NaiveDrugMeanPredictor</th>
       <th>NaiveMeanEffectsPredictor</th>
       <th>NaivePredictor</th>
+      <th>NaiveTissueMeanPredictor</th>
       <th>RandomForest</th>
       <th>SRMF</th>
       <th>SimpleNeuralNetwork</th>
@@ -239,51 +240,54 @@
       <th>DIPK</th>
       <td>1.0000</td>
       <td>0.0000</td>
-      <td>0.0559</td>
+      <td>0.0661</td>
       <td>0.0000</td>
-      <td>0.0373</td>
+      <td>0.0453</td>
       <td>0.0000</td>
-      <td>0.0373</td>
-      <td>0.0373</td>
+      <td>0.0453</td>
+      <td>0.0453</td>
+      <td>0.0000</td>
       <td>0.0000</td>
       <td>0.0001</td>
       <td>0.0000</td>
-      <td>0.0002</td>
+      <td>0.0003</td>
     </tr>
     <tr>
       <th>ElasticNet</th>
       <td>0.0000</td>
       <td>1.0000</td>
       <td>0.0000</td>
-      <td>0.0007</td>
+      <td>0.0002</td>
       <td>0.0000</td>
-      <td>0.3813</td>
+      <td>0.1798</td>
       <td>0.0000</td>
       <td>0.0000</td>
-      <td>0.3813</td>
+      <td>0.1798</td>
+      <td>0.4006</td>
       <td>0.0000</td>
-      <td>0.0097</td>
+      <td>0.0080</td>
       <td>0.0000</td>
     </tr>
     <tr>
       <th>GradientBoosting</th>
-      <td>0.0559</td>
+      <td>0.0661</td>
       <td>0.0000</td>
       <td>1.0000</td>
       <td>0.0000</td>
-      <td>0.0001</td>
+      <td>0.0002</td>
       <td>0.0000</td>
-      <td>0.8607</td>
-      <td>0.8607</td>
+      <td>0.8663</td>
+      <td>0.8663</td>
       <td>0.0000</td>
       <td>0.0000</td>
       <td>0.0000</td>
-      <td>0.0559</td>
+      <td>0.0000</td>
+      <td>0.0661</td>
     </tr>
     <tr>
       <th>MultiOmicsNeuralNetwork</th>
       <td>0.0000</td>
-      <td>0.0007</td>
+      <td>0.0002</td>
       <td>0.0000</td>
       <td>1.0000</td>
       <td>0.0000</td>
@@ -292,28 +296,30 @@
       <td>0.0000</td>
       <td>0.0000</td>
       <td>0.0000</td>
-      <td>0.3813</td>
+      <td>0.0000</td>
+      <td>0.2401</td>
       <td>0.0000</td>
     </tr>
     <tr>
       <th>MultiOmicsRandomForest</th>
-      <td>0.0373</td>
+      <td>0.0453</td>
       <td>0.0000</td>
-      <td>0.0001</td>
+      <td>0.0002</td>
       <td>0.0000</td>
       <td>1.0000</td>
       <td>0.0000</td>
       <td>0.0001</td>
       <td>0.0001</td>
       <td>0.0000</td>
-      <td>0.0373</td>
+      <td>0.0000</td>
+      <td>0.0453</td>
       <td>0.0000</td>
       <td>0.0000</td>
     </tr>
     <tr>
       <th>NaiveCellLineMeanPredictor</th>
       <td>0.0000</td>
-      <td>0.3813</td>
+      <td>0.1798</td>
       <td>0.0000</td>
       <td>0.0000</td>
       <td>0.0000</td>
@@ -321,15 +327,16 @@
       <td>0.0000</td>
       <td>0.0000</td>
       <td>1.0000</td>
+      <td>0.6137</td>
       <td>0.0000</td>
-      <td>0.0007</td>
+      <td>0.0001</td>
       <td>0.0000</td>
     </tr>
     <tr>
       <th>NaiveDrugMeanPredictor</th>
-      <td>0.0373</td>
+      <td>0.0453</td>
       <td>0.0000</td>
-      <td>0.8607</td>
+      <td>0.8663</td>
       <td>0.0000</td>
       <td>0.0001</td>
       <td>0.0000</td>
@@ -338,13 +345,14 @@
       <td>0.0000</td>
       <td>0.0000</td>
       <td>0.0000</td>
-      <td>0.0817</td>
+      <td>0.0000</td>
+      <td>0.0944</td>
     </tr>
     <tr>
       <th>NaiveMeanEffectsPredictor</th>
-      <td>0.0373</td>
+      <td>0.0453</td>
       <td>0.0000</td>
-      <td>0.8607</td>
+      <td>0.8663</td>
       <td>0.0000</td>
       <td>0.0001</td>
       <td>0.0000</td>
@@ -353,12 +361,13 @@
       <td>0.0000</td>
       <td>0.0000</td>
       <td>0.0000</td>
-      <td>0.0817</td>
+      <td>0.0000</td>
+      <td>0.0944</td>
     </tr>
     <tr>
       <th>NaivePredictor</th>
       <td>0.0000</td>
-      <td>0.3813</td>
+      <td>0.1798</td>
       <td>0.0000</td>
       <td>0.0000</td>
       <td>0.0000</td>
@@ -366,8 +375,25 @@
       <td>0.0000</td>
       <td>0.0000</td>
       <td>1.0000</td>
+      <td>0.6137</td>
       <td>0.0000</td>
-      <td>0.0007</td>
+      <td>0.0001</td>
+      <td>0.0000</td>
+    </tr>
+    <tr>
+      <th>NaiveTissueMeanPredictor</th>
+      <td>0.0000</td>
+      <td>0.4006</td>
+      <td>0.0000</td>
+      <td>0.0000</td>
+      <td>0.0000</td>
+      <td>0.6137</td>
+      <td>0.0000</td>
+      <td>0.0000</td>
+      <td>0.6137</td>
+      <td>1.0000</td>
+      <td>0.0000</td>
+      <td>0.0006</td>
       <td>0.0000</td>
     </tr>
     <tr>
@@ -376,7 +402,8 @@
       <td>0.0000</td>
       <td>0.0000</td>
       <td>0.0000</td>
-      <td>0.0373</td>
+      <td>0.0453</td>
+      <td>0.0000</td>
       <td>0.0000</td>
       <td>0.0000</td>
       <td>0.0000</td>
@@ -388,28 +415,30 @@
     <tr>
       <th>SRMF</th>
       <td>0.0000</td>
-      <td>0.0097</td>
+      <td>0.0080</td>
       <td>0.0000</td>
-      <td>0.3813</td>
+      <td>0.2401</td>
       <td>0.0000</td>
-      <td>0.0007</td>
+      <td>0.0001</td>
       <td>0.0000</td>
       <td>0.0000</td>
-      <td>0.0007</td>
+      <td>0.0001</td>
+      <td>0.0006</td>
       <td>0.0000</td>
       <td>1.0000</td>
       <td>0.0000</td>
     </tr>
     <tr>
       <th>SimpleNeuralNetwork</th>
-      <td>0.0002</td>
+      <td>0.0003</td>
       <td>0.0000</td>
-      <td>0.0559</td>
+      <td>0.0661</td>
       <td>0.0000</td>
       <td>0.0000</td>
       <td>0.0000</td>
-      <td>0.0817</td>
-      <td>0.0817</td>
+      <td>0.0944</td>
+      <td>0.0944</td>
+      <td>0.0000</td>
       <td>0.0000</td>
       <td>0.0000</td>
       <td>0.0000</td>
@@ -443,6 +472,7 @@ Before calculating the evaluation metrics, all values were normalized by the pre
 <li><a href="regression_plots/regression_lines_LTO_cell_line_name_MultiOmicsNeuralNetwork.html" target="_blank">regression_lines_LTO_cell_line_name_MultiOmicsNeuralNetwork.html</a></li>
 <li><a href="regression_plots/regression_lines_LTO_cell_line_name_MultiOmicsRandomForest.html" target="_blank">regression_lines_LTO_cell_line_name_MultiOmicsRandomForest.html</a></li>
 <li><a href="regression_plots/regression_lines_LTO_cell_line_name_NaiveCellLineMeanPredictor.html" target="_blank">regression_lines_LTO_cell_line_name_NaiveCellLineMeanPredictor.html</a></li>
+<li><a href="regression_plots/regression_lines_LTO_cell_line_name_NaiveTissueMeanPredictor.html" target="_blank">regression_lines_LTO_cell_line_name_NaiveTissueMeanPredictor.html</a></li>
 <li><a href="regression_plots/regression_lines_LTO_cell_line_name_RandomForest.html" target="_blank">regression_lines_LTO_cell_line_name_RandomForest.html</a></li>
 <li><a href="regression_plots/regression_lines_LTO_cell_line_name_SRMF.html" target="_blank">regression_lines_LTO_cell_line_name_SRMF.html</a></li>
 <li><a href="regression_plots/regression_lines_LTO_cell_line_name_SimpleNeuralNetwork.html" target="_blank">regression_lines_LTO_cell_line_name_SimpleNeuralNetwork.html</a></li>
@@ -452,6 +482,7 @@ Before calculating the evaluation metrics, all values were normalized by the pre
 <li><a href="regression_plots/regression_lines_LTO_cell_line_name_normalized_MultiOmicsNeuralNetwork_normalized.html" target="_blank">regression_lines_LTO_cell_line_name_normalized_MultiOmicsNeuralNetwork_normalized.html</a></li>
 <li><a href="regression_plots/regression_lines_LTO_cell_line_name_normalized_MultiOmicsRandomForest_normalized.html" target="_blank">regression_lines_LTO_cell_line_name_normalized_MultiOmicsRandomForest_normalized.html</a></li>
 <li><a href="regression_plots/regression_lines_LTO_cell_line_name_normalized_NaiveCellLineMeanPredictor_normalized.html" target="_blank">regression_lines_LTO_cell_line_name_normalized_NaiveCellLineMeanPredictor_normalized.html</a></li>
+<li><a href="regression_plots/regression_lines_LTO_cell_line_name_normalized_NaiveTissueMeanPredictor_normalized.html" target="_blank">regression_lines_LTO_cell_line_name_normalized_NaiveTissueMeanPredictor_normalized.html</a></li>
 <li><a href="regression_plots/regression_lines_LTO_cell_line_name_normalized_RandomForest_normalized.html" target="_blank">regression_lines_LTO_cell_line_name_normalized_RandomForest_normalized.html</a></li>
 <li><a href="regression_plots/regression_lines_LTO_cell_line_name_normalized_SRMF_normalized.html" target="_blank">regression_lines_LTO_cell_line_name_normalized_SRMF_normalized.html</a></li>
 <li><a href="regression_plots/regression_lines_LTO_cell_line_name_normalized_SimpleNeuralNetwork_normalized.html" target="_blank">regression_lines_LTO_cell_line_name_normalized_SimpleNeuralNetwork_normalized.html</a></li>
@@ -463,6 +494,15 @@ The x-axis is the first dropdown menu, the y-axis is the second dropdown menu.
 <iframe src="comp_scatter/comp_scatter_cell_line_name_LTO.html" width="100%" height="100%" frameBorder="0"></iframe>
 <h4>Comparisons per model</h4>
 <ul>
+<li><a href="comp_scatter/comp_scatter_cell_line_name DIPK LTO.html" target="_blank">comp_scatter_cell_line_name DIPK LTO.html</a></li>
+<li><a href="comp_scatter/comp_scatter_cell_line_name ElasticNet LTO.html" target="_blank">comp_scatter_cell_line_name ElasticNet LTO.html</a></li>
+<li><a href="comp_scatter/comp_scatter_cell_line_name GradientBoosting LTO.html" target="_blank">comp_scatter_cell_line_name GradientBoosting LTO.html</a></li>
+<li><a href="comp_scatter/comp_scatter_cell_line_name MultiOmicsNeuralNetwork LTO.html" target="_blank">comp_scatter_cell_line_name MultiOmicsNeuralNetwork LTO.html</a></li>
+<li><a href="comp_scatter/comp_scatter_cell_line_name MultiOmicsRandomForest LTO.html" target="_blank">comp_scatter_cell_line_name MultiOmicsRandomForest LTO.html</a></li>
+<li><a href="comp_scatter/comp_scatter_cell_line_name NaiveTissueMeanPredictor LTO.html" target="_blank">comp_scatter_cell_line_name NaiveTissueMeanPredictor LTO.html</a></li>
+<li><a href="comp_scatter/comp_scatter_cell_line_name RandomForest LTO.html" target="_blank">comp_scatter_cell_line_name RandomForest LTO.html</a></li>
+<li><a href="comp_scatter/comp_scatter_cell_line_name SRMF LTO.html" target="_blank">comp_scatter_cell_line_name SRMF LTO.html</a></li>
+<li><a href="comp_scatter/comp_scatter_cell_line_name SimpleNeuralNetwork LTO.html" target="_blank">comp_scatter_cell_line_name SimpleNeuralNetwork LTO.html</a></li>
 </ul>
 </div>
 </body>
